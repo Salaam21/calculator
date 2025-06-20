@@ -1,144 +1,924 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <div class="calculator">
-        <form>
-          <div class="display">
-            <input type="text" name="display" disabled />
-          </div>
-          <div>
-            <input
-              type="button"
-              value="AC"
-              onclick="display.value =''"
-              class="ac"
-            />
-            <input
-              type="button"
-              class="del"
-              value="Del"
-              onclick="display.value =display.value.toString().slice (0,-1)"
-            />
-            <input
-              type="button"
-              class="symbols"
-              value="."
-              onclick="display.value +='.'"
-            />
-            <input
-              type="button"
-              class="symbols"
-              value="/"
-              onclick="display.value +='/'"
-            />
-          </div>
-          <div>
-            <input
-              type="button"
-              class="NumpadBtns"
-              value="7"
-              onclick="display.value +='7'"
-            />
-            <input
-              type="button"
-              class="NumpadBtns"
-              value="8"
-              onclick="display.value +='8'"
-            />
-            <input
-              type="button"
-              class="NumpadBtns"
-              value="9"
-              onclick="display.value +='9'"
-            />
-            <input
-              type="button"
-              class="symbols"
-              value="*"
-              onclick="display.value +='*'"
-            />
-          </div>
-          <div>
-            <input
-              type="button"
-              class="NumpadBtns"
-              value="4"
-              onclick="display.value +='4'"
-            />
-            <input
-              type="button"
-              class="NumpadBtns"
-              value="5"
-              onclick="display.value +='5'"
-            />
-            <input
-              type="button"
-              class="NumpadBtns"
-              value="6"
-              onclick="display.value +='6'"
-            />
-            <input
-              type="button"
-              class="symbols"
-              value="-"
-              onclick="display.value +='-'"
-            />
-          </div>
-          <div>
-            <input
-              type="button"
-              class="NumpadBtns"
-              value="1"
-              onclick="display.value +='1'"
-            />
-            <input
-              type="button"
-              class="NumpadBtns"
-              value="2"
-              onclick="display.value +='2'"
-            />
-            <input
-              type="button"
-              class="NumpadBtns"
-              value="3"
-              onclick="display.value +='3'"
-            />
-            <input
-              type="button"
-              class="symbols"
-              value="+"
-              onclick="display.value +='+'"
-            />
-          </div>
-          <div>
-            <input
-              type="button"
-              class="special"
-              value="00"
-              onclick="display.value +='00'"
-            />
-            <input
-              type="button"
-              class="special"
-              value="0"
-              onclick="display.value += '0'"
-            />
-            <input
-              type="button"
-              value="="
-              onclick="display.value = eval(display.value)"
-              class="equal"
-            />
-          </div>
-        </form>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Portfolio</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="my-avatar.png" alt="Allan" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Munyeme Sinyani">Munyeme Sinyani</h1>
+
+          <p class="title">Application and Web Developer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
       </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:msinyani3@gmail.com" class="contact-link">msinyani3@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+260970548017" class="contact-link">+260 970548017</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="2002-02-21">February 21, 2002</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Lusaka, Lusaka, Zambia</address>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="logo-github"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">GitHub</p>
+              <a href="https://github.com/Salaam21" class="contact-link" target="_blank">github.com/Salaam21</a>
+            </div>
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://www.facebook.com/allansinyani21?mibextid=ZbWKwL" class="social-link" target="_blank">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://x.com/ComputerScience" class="social-link" target="_blank">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.instagram.com/allansinyani21?igsh=MTk0eXNiOHloa3Jrbg==" class="social-link" target="_blank">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I am a Computer Science graduate from the University of Zambia, passionate about technology and continuous learning. My experience includes web and app development, network installation, and leading innovative projects such as an object detection app for the visually impaired. I have interned as a Network Installer at MyTech and as a Web Developer at Herclie Security (Remote), and I am currently a freelance developer working on web, app, and data annotation projects.
+          </p>
+          <p>
+            My technical skills include Python, HTML, CSS, JavaScript, Flutter, SQL, and cloud technologies such as AWS. I am also experienced in AI prompting, data analytics, and mobile app development. I have strong communication and teamwork abilities, and I am committed to delivering high-quality, impactful solutions.
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="icon-design.svg"
+                 alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web design</h4>
+
+                <p class="service-item-text">
+                  The most modern and high-quality design made at a professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+
+                <p class="service-item-text">
+                  High-quality development of sites at the professional level.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile apps</h4>
+
+                <p class="service-item-text">
+                  Professional development of applications for iOS and Android.
+                </p>
+              </div>
+
+            </li>
+            <li class="service-item">
+              <div class="service-icon-box">
+                <img src="icon-dev.svg" alt="ai icon" width="40">
+              </div>
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">AI & Data Annotation</h4>
+                <p class="service-item-text">
+                  Training AI models, data annotation, content writing, and content moderation for intelligent applications.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - Achievements & Interests
+        -->
+        <section class="achievements">
+          <h3 class="h3 achievements-title">Professional Highlights & Interests</h3>
+          <ul class="achievements-list content-card">
+            <li class="achievements-item">
+              <h4 class="h4">Technical Projects</h4>
+              <p class="achievements-text">Developed an object detection application for blind individuals, a real estate website with machine learning, and productivity apps using Android Studio and Flutter.</p>
+            </li>
+            <li class="achievements-item">
+              <h4 class="h4">Leadership</h4>
+              <p class="achievements-text">Served as Academic Affairs Secretary and Vice Chairperson for the UNZANASA Electoral Commission, managing academic events and ensuring fair elections.</p>
+            </li>
+            <li class="achievements-item">
+              <h4 class="h4">Community & Tech</h4>
+              <p class="achievements-text">Organized coding workshops, volunteered in digital literacy programs, and enjoy exploring AI, cloud, and mobile technologies.</p>
+            </li>
+          </ul>
+        </section>
+
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Education</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Bachelor of Science in Computer Science (Networking & Cybersecurity)</h4>
+              <span>The University of Zambia, 2020 — 2024</span>
+              <p class="timeline-text">
+                Majored in networking and information security. Served as Academic Affairs Secretary and Vice Chairperson for the UNZANASA Electoral Commission.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Grade 12 Certificate</h4>
+              <span>Kabwe Trust School, 2018</span>
+              <p class="timeline-text">
+                Graduated with 7 points. Focused on science and mathematics.
+              </p>
+            </li>
+          </ol>
+        </section>
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Professional Experience</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Network Installer, MyTech</h4>
+              <span>Internship</span>
+              <p class="timeline-text">
+                Installed networks, Starlink systems, and switches, ensuring seamless connectivity for clients. Built a network cluster to enhance data processing capabilities.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Web Developer, Herclie Security (Remote)</h4>
+              <span>Internship</span>
+              <p class="timeline-text">
+                Assisted in website development and network installation, including CCTV and network security.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Full Stack Developer, Fin360</h4>
+              <span>Current</span>
+              <p class="timeline-text">
+                Developing mobile applications in Flutter, working with RESTful APIs, MySQL, Yii, and more. Focus on building scalable and user-friendly solutions.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Freelance Developer</h4>
+              <span>2022 — Present</span>
+              <p class="timeline-text">
+                Building applications, training AI, data annotation, content modeling, AI model training, content writing, and content moderation for various clients and projects.
+              </p>
+            </li>
+          </ol>
+        </section>
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="star-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Leadership & Achievements</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Academic Affairs Secretary, UNZANASA</h4>
+              <span>University of Zambia</span>
+              <p class="timeline-text">
+                Managed academic affairs for the School of Natural Sciences, organized events and workshops.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Vice Chairperson, UNZANASA Electoral Commission</h4>
+              <span>University of Zambia</span>
+              <p class="timeline-text">
+                Oversaw the electoral process, coordinated logistics, and ensured fairness.
+              </p>
+            </li>
+          </ol>
+        </section>
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="ribbon-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Certifications & Shortcourses</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">CCNA: Introduction to Networking</h4>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">CCNA: Switching, Routing, and Wireless Essentials</h4>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">AWS Certification</h4>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">IT Essentials, Linux Essentials, Networking Protocols, Data Science, Cybersecurity</h4>
+            </li>
+          </ol>
+        </section>
+        <section class="skill">
+          <h3 class="h3 skills-title">Skills & Proficiencies</h3>
+          <ul class="skills-list content-card">
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Java, HTML, CSS, PHP, SQL, JavaScript</h5>
+                <data value="90">90%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Flutter & React</h5>
+                <data value="85">85%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 85%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Teamwork, Multitasking, Attention to Detail</h5>
+                <data value="90">90%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">AI Prompting, Data Annotation, Data Analytics</h5>
+                <data value="80">80%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Cloud Computing, Mobile App Development</h5>
+                <data value="80">80%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+            </li>
+          </ul>
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+          </ul>
+          <div class="filter-select-box">
+            <button class="filter-select" data-select>
+              <div class="select-value" data-selecct-value>Select category</div>
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+            </button>
+            <ul class="select-list">
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+            </ul>
+          </div>
+          <ul class="project-list">
+            <!-- Blindspot (Object Detection for Visually Impaired) with video -->
+            <li class="project-item active" data-filter-item data-category="applications">
+              <div style="width:100%;margin-bottom:1em;">
+                <video controls autoplay muted width="100%" poster="https://cdn-icons-png.flaticon.com/512/1946/1946488.png">
+                  <source src="me video.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <a href="https://github.com/Salaam21/blindspot.git" target="_blank">
+                <figure class="project-img">
+                  <img src="https://cdn-icons-png.flaticon.com/512/1946/1946488.png" alt="Blindspot App" loading="lazy" style="background:#fff;object-fit:contain;">
+                </figure>
+                <h3 class="project-title">Blindspot (Object Detection App)</h3>
+                <p class="project-category">Applications</p>
+                <p class="project-description">An object detection application for blind individuals, utilizing advanced machine learning techniques to enhance accessibility. <a href="https://youtu.be/3iQBaISEl_8?si=ZLNbfBi0ciQhttnd" target="_blank">Watch Demo</a></p>
+              </a>
+            </li>
+            <!-- Real Estate Website -->
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="https://github.com/Salaam21/DEC-site-demo.git" target="_blank">
+                <figure class="project-img">
+                  <img src="https://cdn-icons-png.flaticon.com/512/809/809957.png" alt="Real Estate Website" loading="lazy" style="background:#fff;object-fit:contain;">
+                </figure>
+                <h3 class="project-title">Real Estate Website</h3>
+                <p class="project-category">Web development</p>
+                <p class="project-description">A real estate site with integrated machine learning features to enhance user experience and office marketplace functionality.</p>
+              </a>
+            </li>
+            <!-- Focus App (Android/Flutter) -->
+            <li class="project-item active" data-filter-item data-category="applications">
+              <a href="#" target="_blank">
+                <figure class="project-img">
+                  <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Focus App" loading="lazy" style="background:#fff;object-fit:contain;">
+                </figure>
+                <h3 class="project-title">Focus App (Android/Flutter)</h3>
+                <p class="project-category">Applications</p>
+                <p class="project-description">A productivity and concentration app built using Android Studio and Flutter, designed to help users improve focus.</p>
+              </a>
+            </li>
+            <!-- Data Annotation Tools -->
+            <li class="project-item active" data-filter-item data-category="applications">
+              <a href="#" target="_blank">
+                <figure class="project-img">
+                  <img src="https://cdn-icons-png.flaticon.com/512/1828/1828919.png" alt="Data Annotation" loading="lazy" style="background:#fff;object-fit:contain;">
+                </figure>
+                <h3 class="project-title">Data Annotation Tools</h3>
+                <p class="project-category">Applications</p>
+                <p class="project-description">Developed and worked on data annotation projects, providing accurate and reliable data for machine learning models.</p>
+              </a>
+            </li>
+            <!-- Calculator -->
+            <li class="project-item active" data-filter-item data-category="applications">
+              <a href="https://allansinyanicalculator.netlify.app/" target="_blank">
+                <figure class="project-img">
+                  <img src="https://cdn-icons-png.flaticon.com/512/992/992651.png" alt="Calculator" loading="lazy" style="background:#fff;object-fit:contain;">
+                </figure>
+                <h3 class="project-title">Calculator</h3>
+                <p class="project-category">Applications</p>
+                <p class="project-description">A simple calculator application for quick and easy calculations.</p>
+              </a>
+            </li>
+            <!-- MyPortifolioWebsite -->
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="https://github.com/Salaam21/MyPortifolioWebsite.git" target="_blank">
+                <figure class="project-img">
+                  <img src="https://img.icons8.com/color/96/000000/source-code.png" alt="My Portfolio Website" loading="lazy" style="background:#fff;object-fit:contain;">
+                </figure>
+                <h3 class="project-title">MyPortifolioWebsite</h3>
+                <p class="project-category">Web development</p>
+                <p class="project-description">Personal portfolio website showcasing my work and skills.</p>
+              </a>
+            </li>
+            <!-- Ping-Pong-Game -->
+            <li class="project-item active" data-filter-item data-category="applications">
+              <a href="https://github.com/Salaam21/Ping-Pong-Game.git" target="_blank">
+                <figure class="project-img">
+                  <img src="https://img.icons8.com/color/96/000000/table-tennis.png" alt="Ping Pong Game" loading="lazy" style="background:#fff;object-fit:contain;">
+                </figure>
+                <h3 class="project-title">Ping-Pong-Game</h3>
+                <p class="project-category">Applications</p>
+                <p class="project-description">A simple ping pong game built with JavaScript.</p>
+              </a>
+            </li>
+            <!-- DEC-site-demo -->
+            <li class="project-item active" data-filter-item data-category="web development">
+              <a href="https://github.com/Salaam21/DEC-site-demo.git" target="_blank">
+                <figure class="project-img">
+                  <img src="https://img.icons8.com/color/96/000000/real-estate.png" alt="DEC Site Demo" loading="lazy" style="background:#fff;object-fit:contain;">
+                </figure>
+                <h3 class="project-title">DEC-site-demo</h3>
+                <p class="project-category">Web development</p>
+                <p class="project-description">Demo website for DEC project.</p>
+              </a>
+            </li>
+            <!-- ZedeventsFull -->
+            <li class="project-item active" data-filter-item data-category="applications">
+              <a href="https://github.com/Salaam21/ZedeventsFull.git" target="_blank">
+                <figure class="project-img">
+                  <img src="https://img.icons8.com/color/96/000000/event-accepted-tentatively.png" alt="Zedevents Full" loading="lazy" style="background:#fff;object-fit:contain;">
+                </figure>
+                <h3 class="project-title">ZedeventsFull</h3>
+                <p class="project-category">Applications</p>
+                <p class="project-description">Full event management web application.</p>
+              </a>
+            </li>
+            <!-- objectdetectionyolov8withUI- -->
+            <li class="project-item active" data-filter-item data-category="applications">
+              <a href="https://github.com/Salaam21/objectdetectionyolov8withUI-.git" target="_blank">
+                <figure class="project-img">
+                  <img src="https://img.icons8.com/color/96/000000/ai.png" alt="Object Detection YOLOv8 with UI" loading="lazy" style="background:#fff;object-fit:contain;">
+                </figure>
+                <h3 class="project-title">objectdetectionyolov8withUI-</h3>
+                <p class="project-category">Applications</p>
+                <p class="project-description">Object detection using YOLOv8 with a user interface.</p>
+              </a>
+            </li>
+            <!-- ObjectDetectionColor -->
+            <li class="project-item active" data-filter-item data-category="applications">
+              <a href="https://github.com/Salaam21/ObjectDetectionColor.git" target="_blank">
+                <figure class="project-img">
+                  <img src="https://img.icons8.com/color/96/000000/paint-palette.png" alt="Object Detection Color" loading="lazy" style="background:#fff;object-fit:contain;">
+                </figure>
+                <h3 class="project-title">ObjectDetectionColor</h3>
+                <p class="project-category">Applications</p>
+                <p class="project-description">Detects objects and highlights them by color.</p>
+              </a>
+            </li>
+            <!-- realtimedetection-switch-mode-button- -->
+            <li class="project-item active" data-filter-item data-category="applications">
+              <a href="https://github.com/Salaam21/realtimedetection-switch-mode-button-.git" target="_blank">
+                <figure class="project-img">
+                  <img src="https://img.icons8.com/color/96/000000/switch-on.png" alt="Realtime Detection Switch Mode" loading="lazy" style="background:#fff;object-fit:contain;">
+                </figure>
+                <h3 class="project-title">realtimedetection-switch-mode-button-</h3>
+                <p class="project-category">Applications</p>
+                <p class="project-description">Real-time object detection with switch mode functionality.</p>
+              </a>
+            </li>
+            <!-- Realtimeobjectdetection -->
+            <li class="project-item active" data-filter-item data-category="applications">
+              <a href="https://github.com/Salaam21/Realtimeobjectdetection.git" target="_blank">
+                <figure class="project-img">
+                  <img src="https://img.icons8.com/color/96/000000/real-time.png" alt="Realtime Object Detection" loading="lazy" style="background:#fff;object-fit:contain;">
+                </figure>
+                <h3 class="project-title">Realtimeobjectdetection</h3>
+                <p class="project-category">Applications</p>
+                <p class="project-description">Real-time object detection application.</p>
+              </a>
+            </li>
+            <!-- QuietMind -->
+            <li class="project-item active" data-filter-item data-category="applications">
+              <a href="https://github.com/Salaam21/QuietMind.git" target="_blank">
+                <figure class="project-img">
+                  <img src="https://img.icons8.com/color/96/000000/meditation-guru.png" alt="QuietMind" loading="lazy" style="background:#fff;object-fit:contain;">
+                </figure>
+                <h3 class="project-title">QuietMind</h3>
+                <p class="project-category">Applications</p>
+                <p class="project-description">Mental health and mindfulness app.</p>
+              </a>
+            </li>
+            <!-- blindspot -->
+            <li class="project-item active" data-filter-item data-category="applications">
+              <a href="https://github.com/Salaam21/blindspot.git" target="_blank">
+                <figure class="project-img">
+                  <img src="https://img.icons8.com/color/96/000000/eye-unchecked.png" alt="Blindspot" loading="lazy" style="background:#fff;object-fit:contain;">
+                </figure>
+                <h3 class="project-title">blindspot</h3>
+                <p class="project-category">Applications</p>
+                <p class="project-description">Blindspot detection system project. <a href="https://youtu.be/3iQBaISEl_8?si=ZLNbfBi0ciQhttnd" target="_blank">Watch on YouTube</a></p>
+              </a>
+            </li>
+            <!-- Calculator -->
+            <li class="project-item active" data-filter-item data-category="applications">
+              <a href="https://github.com/Salaam21/calculator.git" target="_blank">
+                <figure class="project-img">
+                  <img src="https://img.icons8.com/color/96/000000/calculator.png" alt="Calculator" loading="lazy" style="background:#fff;object-fit:contain;">
+                </figure>
+                <h3 class="project-title">calculator</h3>
+                <p class="project-category">Applications</p>
+                <p class="project-description">Simple calculator application.</p>
+              </a>
+            </li>
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="blog">
+
+        <header>
+          <h2 class="h2 article-title">Blog</h2>
+        </header>
+
+        <section class="blog-intro">
+          <p style="font-size:1.1em; color:#666; margin-bottom:1.5em;">
+            Welcome to my blog! Here I share project stories, coding tips, and insights from my journey as a developer. Dive in to learn more about my work and the tech I love.
+          </p>
+        </section>
+
+        <section class="blog-posts">
+          <div style="width:100%;margin-bottom:1em;">
+            <video controls autoplay muted width="100%" poster="https://cdn-icons-png.flaticon.com/512/1946/1946488.png">
+              <source src="me video.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <ul class="blog-posts-list">
+            <li class="blog-post-item">
+              <a href="https://youtu.be/3iQBaISEl_8?si=ZLNbfBi0ciQhttnd" target="_blank">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blindspot.png" alt="Blindspot App for Visually Impaired" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Accessibility</p>
+                    <span class="dot"></span>
+                    <time datetime="2025-06-19">June 19, 2025</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">Blindspot: Empowering the Visually Impaired</h3>
+                  <p class="blog-text">
+                    Discover my innovative app designed to assist visually impaired individuals in navigating their environment safely. Watch the demo video to see how technology can make a real difference!
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/project-1.jpg" alt="Portfolio Website Write-up" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Web Development</p>
+                    <span class="dot"></span>
+                    <time datetime="2025-06-19">June 19, 2025</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">Building My Portfolio Website</h3>
+                  <p class="blog-text">
+                    A behind-the-scenes look at how I designed and developed my personal portfolio using modern web technologies, focusing on clean design and user experience.
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/project-2.png" alt="Ping Pong Game Write-up" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">JavaScript</p>
+                    <span class="dot"></span>
+                    <time datetime="2025-06-19">June 19, 2025</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">Creating a Ping Pong Game in JavaScript</h3>
+                  <p class="blog-text">
+                    Learn how I built a fun and interactive ping pong game using JavaScript, covering game logic, animation, and user controls.
+                  </p>
+                </div>
+              </a>
+            </li>
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-6.jpg" alt="Tips and Tricks" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Tips & Tricks</p>
+                    <span class="dot"></span>
+                    <time datetime="2025-06-19">June 19, 2025</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">My Top 5 Coding Tips</h3>
+                  <p class="blog-text">
+                    Boost your productivity with my favorite coding tips: use version control, write clean code, comment wisely, test often, and never stop learning!
+                  </p>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+            src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=lusaka%20,lusaka%20zambia+(Salaam%20tech)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.gps.ie/">gps vehicle tracker</a></iframe>
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section>
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form id="whatsapp-form" class="form" data-form onsubmit="return false;">
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="button" id="whatsapp-send-btn" data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
     </div>
-  </body>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+document.getElementById('whatsapp-send-btn').onclick = function() {
+  var name = document.querySelector('input[name="fullname"]').value;
+  var email = document.querySelector('input[name="email"]').value;
+  var message = document.querySelector('textarea[name="message"]').value;
+  var text = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nMessage: ' + message);
+  var phone = '260970548017';
+  window.open('https://wa.me/' + phone + '?text=' + text, '_blank');
+};
+</script>
+
+</body>
+
 </html>
